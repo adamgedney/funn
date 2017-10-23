@@ -2,6 +2,7 @@
  * Fn Index: 
  *  obj_dotToLiteral
  *  obj_deepMerge
+ *  obj_createDeepFromDotNames
 */
 
 /**
@@ -29,4 +30,38 @@ export const obj_deepMerge = (target, source) => {
     }
   }
   return target;
+};
+
+/** 
+ * Converts an object using dot syntax property names to a deep object.
+ * Created by Maikel, 10.23.17
+ * ie. 
+ *  { "parent.child.grand" : "test val"} becomes
+ *  {
+ *    parent : {
+ *      child : {
+ *        grand : "test val"
+ *      }
+ *    }
+ *  }
+*/
+export const obj_createDeepFromDotNames = obj => {
+  const finalObj = {};
+
+  Object.keys(obj).forEach(key => {
+    let tmpObj = finalObj;
+    let lastPart = '';
+    const keyParts = key.split('.');
+
+    for(let i = 0; i < keyParts.length -1; i++){
+      const currentPart = keyParts[i];
+      if(!tmpObj[currentPart]){
+        tmpObj[currentPart] = {};
+      }
+      tmpObj = tmpObj[currentPart];
+    }
+    tmpObj[keyParts[keyParts.length - 1]] = obj[key]
+  }
+  )
+  return finalObj;
 };

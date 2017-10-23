@@ -4,5 +4,9 @@ export * from './objects';
 export * from './localstorage';
 export * from './events';
 export * from './url';
+export * from './forms';
+export * from './speech';
+export * from './logs';
+export * from './arrays';
 
 export * from './filteredlistPreferences';

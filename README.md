@@ -4,7 +4,7 @@ Answer: small utility set used in functional programs organized by category file
 
 
 ## Function Index
-### Date
+### Dates
  *  date_humanToUTC
  *  date_MMddYYYY
  *  date_yyyymmdd
@@ -24,6 +24,7 @@ Answer: small utility set used in functional programs organized by category file
 ### Objects
  *  obj_dotToLiteral
  *  obj_deepMerge
+ *  obj_createDeepFromDotNames
 
 ### Strings
  *  string_capFirstLetter
@@ -40,3 +41,14 @@ Answer: small utility set used in functional programs organized by category file
  *  url_getParam
  *  url_getPageParams
  *  url_makeObjFromQueryString
+
+ ### Logs
+ *  log
+ *  l
+
+ ### Arrays
+ *  array_toCSV
+
+  ### Speech
+ *  speech_playMessage
+ *  speech_listen

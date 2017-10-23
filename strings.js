@@ -9,9 +9,11 @@
  * @param string
  * @returns {string}
  */
-export const string_capFirstLetter = string => {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-};
+export const string_capFirstLetter = string =>
+  string
+    .charAt(0)
+    .toUpperCase()
+  + string.slice(1);
 
 /**
  * Validates a string against a regex pattern
@@ -23,4 +25,4 @@ export const string_validate = (str, regEx) => {
   const patt = new RegExp(regEx);
 
   return patt.test(str);
-},
+};
